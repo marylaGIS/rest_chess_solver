@@ -27,6 +27,8 @@ class King(Figure):
                 available_moves_list.append(file + str(self.rank))
 
         if self.rank not in RANKS or self.file not in FILES:
-            available_moves_list = ['Field does not exist']
+            available_moves_list = []
+            error = "Field does not exist."
+            return available_moves_list, error
 
         return list(set(available_moves_list))

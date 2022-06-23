@@ -4,7 +4,7 @@ import chess
 
 def test_king_moves():
     k0 = chess.King("a", 15)
-    assert k0.list_available_moves() == ["Field does not exist"]
+    assert k0.list_available_moves() == []
 
     k1 = chess.King("a", 1)
     assert sorted(k1.list_available_moves()) == sorted(["b1", "a2", "b2"])
